@@ -46,36 +46,14 @@ async function getTransporter() {
     };
   }
 
-  // 2. Development / Test Mode: Use Ethereal test account with real web inbox preview
-  try {
-    if (!etherealTransporter) {
-      const testAccount = await nodemailer.createTestAccount();
-      etherealTransporter = nodemailer.createTransport({
-        host: testAccount.smtp.host,
-        port: testAccount.smtp.port,
-        secure: testAccount.smtp.secure,
-        auth: {
-          user: testAccount.user,
-          pass: testAccount.pass
-        }
-      });
-      console.log(`[EMAIL SERVICE] Created development Ethereal inbox: ${testAccount.user}`);
-    }
-    return {
-      transporter: etherealTransporter,
-      isLiveSmtp: false,
-      isEthereal: true,
-      provider: 'Ethereal Test Inbox'
-    };
-  } catch (err) {
-    console.log(`[EMAIL SERVICE] Ethereal initialization bypassed (${err.message}). Using console dispatcher.`);
-    return {
-      transporter: null,
-      isLiveSmtp: false,
-      isEthereal: false,
-      provider: 'Local Terminal'
-    };
-  }
+  // 2. If live SMTP credentials are not configured, bypass external network attempts immediately!
+  // This prevents cloud/Render outbound SMTP network timeouts (which take 30+ seconds to hang).
+  return {
+    transporter: null,
+    isLiveSmtp: false,
+    isEthereal: false,
+    provider: 'Simulated Instant Dispatch'
+  };
 }
 
 /**
