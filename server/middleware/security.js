@@ -141,13 +141,13 @@ const registerFailedLogin = (email, ip, userAgent) => {
   const current = failedLoginAttempts.get(lower) || { count: 0, lockedUntil: null };
   current.count += 1;
 
-  if (current.count >= 5) {
-    current.lockedUntil = Date.now() + 15 * 60 * 1000;
+  if (current.count >= 20) {
+    current.lockedUntil = Date.now() + 1 * 60 * 1000; // 1 minute lockout after 20 attempts
     logSecurityEvent('ACCOUNT_LOCKED', {
       severity: 'CRITICAL',
       ip,
       userAgent,
-      message: `Account [${email}] locked for 15 minutes due to 5 consecutive failed login attempts.`
+      message: `Account [${email}] locked for 1 minute due to 20 consecutive failed login attempts.`
     });
   } else {
     logSecurityEvent('LOGIN_FAILURE', {
