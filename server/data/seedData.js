@@ -6,6 +6,32 @@ async function getSeedData() {
 
   const users = [
     {
+      _id: 'usr_personal',
+      id: 'usr_personal',
+      name: 'Mahmudul Hassan',
+      email: 'cse12105048@gmail.com',
+      password: investorHash,
+      role: 'investor',
+      phone: '+880 1712-345678',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=250',
+      nid: '19952692015000555',
+      address: 'Dhaka, Bangladesh',
+      bankDetails: {
+        bankName: 'City Bank PLC',
+        accountNo: '1102938475001',
+        branch: 'Principal Branch',
+        bkashNo: '01712345678'
+      },
+      kycStatus: 'verified',
+      kycDocuments: [
+        { name: 'NID Card (Front & Back)', fileUrl: '/docs/nid_verified.pdf', submittedAt: '2025-01-10' }
+      ],
+      riskProfile: 'moderate',
+      walletBalance: 500000,
+      isEmailVerified: true,
+      createdAt: '2025-01-01T00:00:00.000Z'
+    },
+    {
       _id: 'usr_001',
       id: 'usr_001',
       name: 'Ahmed Rahman',
