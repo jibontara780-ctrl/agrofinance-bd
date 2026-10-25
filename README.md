@@ -8,6 +8,7 @@
 [![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Mobile First](https://img.shields.io/badge/Mobile--First-100%25%20Responsive-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](#11--100-mobile-first-responsive--adaptive-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 <br/>
@@ -97,6 +98,11 @@ In Bangladesh, traditional farmers often struggle to secure fair capital, while 
 - **Project CMS**: Create, update, and manage agribusiness projects and funding limits.
 - **SIEM Cyber Threat Radar**: Real-time audit logs tracking user IP addresses, timestamps, failed login attempts, and platform security status.
 
+### 11. 📱 100% Mobile-First Responsive & Adaptive UI
+- **Zero-Overflow Viewport Engine**: Hardened against mobile zoom shifts and horizontal overflow (`overflow-x: hidden !important`, strict 100vw constraints).
+- **Adaptive Touch Navigation**: Mobile-optimized header with compact branding, 1-click language switcher, and responsive Hamburger drawer (☰) housing quick auth trays.
+- **Cross-Device Parity**: Smooth, fluid responsive layout optimized across ultra-compact smartphones (360px), tablets, and high-resolution desktop screens.
+
 ---
 
 ## 🛠️ Tech Stack (What We Used)
@@ -106,6 +112,7 @@ In Bangladesh, traditional farmers often struggle to secure fair capital, while 
 |---|---|
 | **React 18** | Component-based Single Page Application (SPA) architecture |
 | **Tailwind CSS v3.4** | Utility-first, responsive, and mobile-first UI styling |
+| **Responsive Viewport Engine** | Strict mobile boundary lock (`overflow-x: hidden`), touch-friendly layouts |
 | **Chart.js** | Interactive charts (Portfolio growth, asset distribution, yield comparison) |
 | **Canvas Confetti** | Visual celebration effects upon investment completion |
 | **Google Fonts** | *Hind Siliguri*, *Noto Sans Bengali*, *Inter*, and *Outfit* typography |
