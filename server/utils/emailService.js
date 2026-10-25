@@ -31,9 +31,9 @@ async function getTransporter() {
         transporter: nodemailer.createTransport({
           service: 'gmail',
           auth: { user, pass },
-          connectionTimeout: 10000,
-          greetingTimeout: 10000,
-          socketTimeout: 15000
+          connectionTimeout: 2500,
+          greetingTimeout: 2500,
+          socketTimeout: 5000
         }),
         isLiveSmtp: true,
         user,
@@ -48,9 +48,9 @@ async function getTransporter() {
         secure,
         auth: { user, pass },
         tls: { rejectUnauthorized: false },
-        connectionTimeout: 10000,
-        greetingTimeout: 10000,
-        socketTimeout: 15000
+        connectionTimeout: 2500,
+        greetingTimeout: 2500,
+        socketTimeout: 5000
       }),
       isLiveSmtp: true,
       user,
@@ -245,8 +245,9 @@ async function sendEmailOtp(toEmail, otpCode, userName = '') {
   console.log(`🔒 Delivery Status: Dispatched via ${method.toUpperCase()}`);
   console.log(`================================================================\n`);
 
+  const delivered = (method === 'live_smtp' || method === 'ethereal_preview');
   return {
-    success: true,
+    success: delivered,
     method,
     recipient,
     devOtp: otpCode,

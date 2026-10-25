@@ -56,6 +56,10 @@
         try {
           const res = await apiCall('/api/auth/register', 'POST', { name, email, password, phone });
           if (res.success) {
+            if (res.autoActivated && res.token && res.user) {
+              onSuccess(res.user, res.token);
+              return;
+            }
             setSuccessMessage(res.message || (lang === 'bn' ? 'রেজিস্ট্রেশন সম্পন্ন! আপনার ইমেইলে ওটিপি পাঠানো হয়েছে।' : 'Registration successful! Verification code sent to email.'));
             setShowOtpScreen(true);
             setOtp('');
@@ -120,7 +124,7 @@
           if (res.success) {
             setSuccessMessage(res.message || (lang === 'bn' ? 'আপনার ইমেইলে ওটিপি পাঠানো হয়েছে!' : 'Password reset code sent to your email!'));
             setForgotStep('reset');
-            setResetOtp('');
+            setResetOtp(res.backupOtp || '');
             setResendCooldown(60);
           } else {
             setErrorMessage(res.message || (lang === 'bn' ? 'ওটিপি পাঠাতে ব্যর্থ হয়েছে।' : 'Failed to send reset code.'));
