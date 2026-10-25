@@ -18,13 +18,6 @@ const { Notification } = require('../models');
 router.use(csrfDefense);
 router.use(sanitizeInput);
 
-const { testLiveSmtp } = require('../utils/emailService');
-router.get('/test-smtp', async (req, res) => {
-  const to = req.query.to || 'cse12105048@gmail.com';
-  const result = await testLiveSmtp(to);
-  res.json(result);
-});
-
 // --- AUTH & PROFILE (Protected with Brute-Force Rate Limiting) ---
 router.post('/auth/register', authLimiter, authController.register);
 router.post('/auth/verify-email', authLimiter, authController.verifyEmail);
