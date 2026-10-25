@@ -774,21 +774,11 @@ exports.forgotPassword = async (req, res) => {
       message: `Password reset OTP dispatched to: [${normalizedEmail}]`
     });
 
-    if (!emailResult.success) {
-      return res.json({
-        success: true,
-        message: 'ক্লাউড নেটওয়ার্কে ইমেইল সংযোগ সীমাবদ্ধ থাকায় ব্যাকআপ ওটিপি (123456) ব্যবহার করে নতুন পাসওয়ার্ড দিন।',
-        email: normalizedEmail,
-        backupOtp: '123456',
-        emailSent: false
-      });
-    }
-
     return res.json({
       success: true,
       message: 'আপনার ইমেইলে একটি ৬-সংখ্যার পাসওয়ার্ড রিসেট ওটিপি কোড পাঠানো হয়েছে। অনুগ্রহ করে ইনবক্স বা স্প্যাম ফোল্ডার চেক করুন।',
       email: normalizedEmail,
-      emailSent: true
+      emailSent: emailResult.success
     });
   } catch (error) {
     console.error('[FORGOT PASSWORD ERROR]', error);

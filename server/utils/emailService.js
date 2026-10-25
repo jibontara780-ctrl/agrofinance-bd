@@ -186,6 +186,72 @@ function generateOtpHtml(otpCode, userName, email) {
 }
 
 /**
+ * Dispatch email via Resend HTTP REST API (Port 443 - never blocked on cloud)
+ */
+async function sendViaResend(to, subject, html) {
+  const apiKey = (process.env.RESEND_API_KEY || '').trim();
+  if (!apiKey) return { success: false };
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: process.env.EMAIL_FROM || 'AgroFinance BD <onboarding@resend.dev>',
+        to: [to],
+        subject,
+        html
+      })
+    });
+    const data = await res.json();
+    if (res.ok && data.id) {
+      console.log(`[EMAIL SERVICE - RESEND HTTP SUCCESS] Delivered to ${to}, ID: ${data.id}`);
+      return { success: true, messageId: data.id };
+    }
+    console.error('[RESEND HTTP ERROR]', data);
+    return { success: false, error: data.message };
+  } catch (err) {
+    console.error('[RESEND FETCH ERROR]', err.message);
+    return { success: false, error: err.message };
+  }
+}
+
+/**
+ * Dispatch email via Brevo HTTP REST API (Port 443 - never blocked on cloud)
+ */
+async function sendViaBrevo(to, subject, html) {
+  const apiKey = (process.env.BREVO_API_KEY || '').trim();
+  if (!apiKey) return { success: false };
+  try {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'api-key': apiKey,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        sender: { name: 'AgroFinance BD', email: process.env.BREVO_SENDER || 'jibontara780@gmail.com' },
+        to: [{ email: to }],
+        subject,
+        htmlContent: html
+      })
+    });
+    const data = await res.json();
+    if (res.ok && (data.messageId || data.id)) {
+      console.log(`[EMAIL SERVICE - BREVO HTTP SUCCESS] Delivered to ${to}`);
+      return { success: true, messageId: data.messageId || data.id };
+    }
+    console.error('[BREVO HTTP ERROR]', data);
+    return { success: false, error: data.message };
+  } catch (err) {
+    console.error('[BREVO FETCH ERROR]', err.message);
+    return { success: false, error: err.message };
+  }
+}
+
+/**
  * Public Dispatcher: Sends 6-digit OTP to User's Email Address
  * Dispatches via live SMTP (if configured), Ethereal web preview, or development logger.
  */
@@ -197,6 +263,20 @@ async function sendEmailOtp(toEmail, otpCode, userName = '') {
 
   let previewUrl = null;
   let method = 'server_console';
+
+  // 1. Primary Cloud Check: HTTP Email API (Port 443 - never blocked on Render or cloud hosts)
+  if (process.env.RESEND_API_KEY) {
+    const resend = await sendViaResend(recipient, subject, html);
+    if (resend.success) {
+      return { success: true, method: 'resend_http', recipient, devOtp: otpCode };
+    }
+  }
+  if (process.env.BREVO_API_KEY) {
+    const brevo = await sendViaBrevo(recipient, subject, html);
+    if (brevo.success) {
+      return { success: true, method: 'brevo_http', recipient, devOtp: otpCode };
+    }
+  }
 
   try {
     const { transporter, isLiveSmtp, isEthereal, provider } = await getTransporter();
@@ -541,6 +621,16 @@ async function sendPasswordResetOtpEmail(toEmail, otpCode, userName = '') {
   </table>
 </body>
 </html>`;
+
+  // 1. Primary Cloud Check: HTTP Email API (Port 443 - never blocked on Render)
+  if (process.env.RESEND_API_KEY) {
+    const resend = await sendViaResend(recipient, subject, html);
+    if (resend.success) return { success: true };
+  }
+  if (process.env.BREVO_API_KEY) {
+    const brevo = await sendViaBrevo(recipient, subject, html);
+    if (brevo.success) return { success: true };
+  }
 
   try {
     const { transporter } = await getTransporter();

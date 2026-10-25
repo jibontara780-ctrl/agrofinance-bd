@@ -124,7 +124,7 @@
           if (res.success) {
             setSuccessMessage(res.message || (lang === 'bn' ? 'আপনার ইমেইলে ওটিপি পাঠানো হয়েছে!' : 'Password reset code sent to your email!'));
             setForgotStep('reset');
-            setResetOtp(res.backupOtp || '');
+            setResetOtp('');
             setResendCooldown(60);
           } else {
             setErrorMessage(res.message || (lang === 'bn' ? 'ওটিপি পাঠাতে ব্যর্থ হয়েছে।' : 'Failed to send reset code.'));
