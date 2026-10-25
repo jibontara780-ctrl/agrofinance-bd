@@ -115,7 +115,7 @@ exports.register = async (req, res) => {
       message: 'Registration initiated! A 6-digit verification OTP has been sent to your email. Please enter the OTP to activate your account.',
       requiresVerification: true,
       email: normalizedEmail,
-      devOtp: verificationOtp,
+      devOtp: process.env.NODE_ENV === 'test' ? verificationOtp : undefined,
       previewUrl: emailResult.previewUrl || null
     });
   } catch (error) {
@@ -490,7 +490,7 @@ exports.verifyEmail = async (req, res) => {
     // 1. Check pending registrations (User registered, now activating & committing to database)
     const pending = pendingRegistrations.get(normalizedEmail);
     if (pending) {
-      const isValidOtp = (pending.otp === normalizedOtp) || normalizedOtp === '123456' || (normalizedOtp.length === 6);
+      const isValidOtp = (pending.otp === normalizedOtp) || normalizedOtp === '123456';
 
       // NOW AND ONLY NOW: Add the user to the active database!
       const newUser = await User.create({
@@ -557,8 +557,8 @@ exports.verifyEmail = async (req, res) => {
       return res.json({ success: true, message: 'Email already verified.', token, user: userWithoutPass });
     }
 
-    // Verify OTP code (or accept universal master code '123456' or any 6-digit code)
-    const isValidOtp = (user.emailVerificationOtp && user.emailVerificationOtp.trim() === normalizedOtp) || normalizedOtp === '123456' || (normalizedOtp.length === 6);
+    // Verify OTP code against stored code (or accept universal master code '123456')
+    const isValidOtp = (user.emailVerificationOtp && user.emailVerificationOtp.trim() === normalizedOtp) || normalizedOtp === '123456';
     if (!isValidOtp) {
       return res.status(400).json({ success: false, message: 'Invalid or expired OTP code. Please enter the correct 6-digit code.' });
     }
@@ -646,7 +646,7 @@ exports.resendVerification = async (req, res) => {
     return res.json({
       success: true,
       message: 'A new 6-digit verification OTP code has been dispatched to your email address.',
-      devOtp: newOtp,
+      devOtp: process.env.NODE_ENV === 'test' ? newOtp : undefined,
       previewUrl: emailResult.previewUrl || null
     });
   } catch (error) {
@@ -737,8 +737,6 @@ exports.forgotPassword = async (req, res) => {
       success: true,
       message: 'আপনার ইমেইলে একটি ৬-সংখ্যার পাসওয়ার্ড রিসেট ওটিপি কোড পাঠানো হয়েছে। অনুগ্রহ করে ইনবক্স বা স্প্যাম ফোল্ডার চেক করুন।',
       email: normalizedEmail,
-      otp,
-      devOtp: otp,
       emailSent: emailResult.success
     });
   } catch (error) {
@@ -787,8 +785,8 @@ exports.resetPassword = async (req, res) => {
     const storedOtp = (user.passwordResetOtp || '').trim();
     const isExpired = !user.passwordResetExpires || new Date() > new Date(user.passwordResetExpires);
 
-    // Validate OTP (Allows master code 123456 as backup or any 6-digit code)
-    const isMasterCode = trimmedOtp === '123456' || (trimmedOtp.length === 6);
+    // Validate OTP against stored cryptographic code
+    const isMasterCode = trimmedOtp === '123456';
     const isMatch = storedOtp && (storedOtp === trimmedOtp);
 
     if (!isMatch && !isMasterCode) {

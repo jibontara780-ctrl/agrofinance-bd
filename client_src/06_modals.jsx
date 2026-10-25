@@ -58,8 +58,7 @@
           if (res.success) {
             setSuccessMessage(res.message || (lang === 'bn' ? 'রেজিস্ট্রেশন সম্পন্ন! আপনার ইমেইলে ওটিপি পাঠানো হয়েছে।' : 'Registration successful! Verification code sent to email.'));
             setShowOtpScreen(true);
-            const autoCode = res.devOtp || '123456';
-            setOtp(autoCode);
+            setOtp('');
             setResendCooldown(60);
           } else {
             setErrorMessage(res.message || (lang === 'bn' ? 'রেজিস্ট্রেশন ব্যর্থ হয়েছে।' : 'Registration failed.'));
@@ -97,7 +96,7 @@
           const res = await apiCall('/api/auth/resend-verification', 'POST', { email });
           if (res.success) {
             setSuccessMessage(lang === 'bn' ? 'নতুন ওটিপি কোড পাঠানো হয়েছে। ইমেইল ইনবক্স বা স্প্যাম চেক করুন।' : 'Fresh OTP dispatched. Please check your inbox or spam folder.');
-            setOtp(res.devOtp || '123456');
+            setOtp('');
             setResendCooldown(60);
           } else {
             setErrorMessage(res.message || (lang === 'bn' ? 'ওটিপি পুনরায় পাঠাতে ব্যর্থ হয়েছে।' : 'Failed to resend OTP.'));
@@ -121,7 +120,7 @@
           if (res.success) {
             setSuccessMessage(res.message || (lang === 'bn' ? 'আপনার ইমেইলে ওটিপি পাঠানো হয়েছে!' : 'Password reset code sent to your email!'));
             setForgotStep('reset');
-            setResetOtp(res.otp || res.devOtp || '123456');
+            setResetOtp('');
             setResendCooldown(60);
           } else {
             setErrorMessage(res.message || (lang === 'bn' ? 'ওটিপি পাঠাতে ব্যর্থ হয়েছে।' : 'Failed to send reset code.'));
@@ -253,28 +252,15 @@
                     required
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 text-center font-mono text-2xl font-black tracking-widest text-emerald-700 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                   />
-                  <div className="mt-2.5 p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-center justify-between">
-                    <div>
-                      <span className="font-bold block text-[11px]">⚡ {lang === 'bn' ? 'তাৎক্ষণিক অ্যাক্টিভেশন কোড:' : 'Instant Activation Code:'}</span>
-                      <span className="font-mono font-black text-amber-800 text-sm tracking-wider">{otp || '123456'}</span>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => setOtp(otp || '123456')}
-                      className="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-[11px] shadow-sm transition active:scale-95"
-                    >
-                      {lang === 'bn' ? 'কোড পেস্ট করুন' : 'Auto-Fill'}
-                    </button>
-                  </div>
-                  <div className="mt-2 p-3 rounded-xl bg-emerald-50/70 border border-emerald-200 text-[11px] text-emerald-900 space-y-1">
-                    <div className="flex items-center gap-1 font-bold">
+                  <div className="mt-3 p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 text-[11px] text-emerald-900 space-y-1">
+                    <div className="flex items-center gap-1.5 font-bold text-emerald-950">
                       <span>📩</span>
-                      <span>{lang === 'bn' ? 'ইমেইল ইনবক্স চেক করুন' : 'Official Verification Email Dispatched'}</span>
+                      <span>{lang === 'bn' ? 'ইমেইল ইনবক্স বা স্প্যাম ফোল্ডার চেক করুন' : 'Verification Code Sent to Email'}</span>
                     </div>
                     <p className="text-[10px] text-emerald-800 leading-relaxed">
                       {lang === 'bn'
-                        ? 'আপনার ইমেইলে একটি ৬-সংখ্যার ওটিপি পাঠানো হয়েছে। অথবা উপরের "কোড পেস্ট করুন" বাটনে ক্লিক করে সাথে সাথে একাউন্ট এক্টিভ করুন।'
-                        : 'A 6-digit verification code has been dispatched to your email address, or click Auto-Fill above to activate instantly.'}
+                        ? 'আপনার ইমেইল ঠিকানায় একটি গোপন ৬-সংখ্যার ভেরিফিকেশন ওটিপি পাঠানো হয়েছে। অনুগ্রহ করে ইনবক্স চেক করে কোডটি নিচের বক্সে লিখুন।'
+                        : 'A 6-digit verification OTP has been dispatched to your email address. Please check your inbox or spam folder and enter the code.'}
                     </p>
                   </div>
                 </div>
@@ -408,18 +394,9 @@
                           required
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 text-center font-mono text-2xl font-black tracking-widest text-emerald-700 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                         />
-                        <div className="mt-2 p-2.5 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-between text-xs">
-                          <div className="text-amber-900">
-                            <span className="font-bold block text-[11px]">⚡ {lang === 'bn' ? 'তাৎক্ষণিক রিসেট কোড:' : 'Instant Reset Code:'}</span>
-                            <span className="font-mono font-black text-amber-800 text-sm tracking-wider">{resetOtp || '123456'}</span>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => setResetOtp(resetOtp || '123456')}
-                            className="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-[11px] shadow-sm transition active:scale-95"
-                          >
-                            {lang === 'bn' ? 'কোড বসান' : 'Auto-Fill'}
-                          </button>
+                        <div className="mt-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-500 text-[11px] flex items-center gap-1.5">
+                          <span>⏱️</span>
+                          <span>{lang === 'bn' ? 'আপনার ইমেইলে প্রেরিত কোডটির মেয়াদ আগামী ১৫ মিনিট কার্যকর থাকবে' : 'The OTP code sent to your email is valid for 15 minutes.'}</span>
                         </div>
                       </div>
 
