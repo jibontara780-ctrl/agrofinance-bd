@@ -14,7 +14,7 @@
 
 **AgroFinance BD** is a modern Full-Stack MERN Agri-Fintech platform designed for Bangladesh. It connects retail and institutional investors directly with profitable, insured, and technology-monitored agricultural projects across crops, fisheries, dairy, and livestock.
 
-[🌐 Live Website](https://agrofinance-bd.onrender.com) • [📡 API Health Status](https://agrofinance-bd.onrender.com/api/health) • [🔐 Admin Gateway](https://agrofinance-bd.onrender.com/#admin-gateway)
+[🌐 Live Website](https://agrofinance-bd.onrender.com)
 
 </div>
 
