@@ -1,5 +1,7 @@
 # 🌾 AgroFinance BD — Enterprise Agricultural Fintech & Investment Platform
 
+<div align="center">
+
 [![Live Production](https://img.shields.io/badge/Live%20Platform-Online-059669?style=for-the-badge&logo=render&logoColor=white)](https://agrofinance-bd.onrender.com)
 [![Node.js](https://img.shields.io/badge/Node.js-v18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
@@ -7,295 +9,420 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![MongoDB](https://img.shields.io/badge/Database-MongoDB%20%7C%20In--Memory-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Cybersecurity](https://img.shields.io/badge/Cybersecurity-OWASP%20Top%2010%20Hardened-red?style=for-the-badge&logo=shield&logoColor=white)](#-cybersecurity-defense-architecture)
-[![Email Engine](https://img.shields.io/badge/Email%20Engine-Brevo%20REST%20API-0B99FF?style=for-the-badge&logo=mail.ru&logoColor=white)](https://brevo.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-> **AgroFinance BD** is a production-grade, enterprise-ready Agricultural Investment Management & Fintech Platform tailored for Bangladesh's modern agribusiness economy. It connects retail and institutional investors directly with high-yield, insured, technology-enabled farming units across crops, fisheries, dairy, and livestock.
+<br/>
 
----
+**AgroFinance BD** is a production-grade, enterprise agricultural investment and fintech platform built for Bangladesh's modern agribusiness ecosystem. It connects retail and institutional investors directly with high-yield, insured, technology-driven farming projects across crops, fisheries, dairy, and livestock.
 
-## 🌐 Live Cloud Deployment
+[Explore Live Demo](https://agrofinance-bd.onrender.com) • [API Health Check](https://agrofinance-bd.onrender.com/api/health) • [Report Issue](https://github.com/jibontara780-ctrl/agrofinance-bd/issues)
 
-- 🚀 **Live Production Application:** [https://agrofinance-bd.onrender.com](https://agrofinance-bd.onrender.com)
-- 📡 **REST API Health Check:** [https://agrofinance-bd.onrender.com/api/health](https://agrofinance-bd.onrender.com/api/health)
-- 🔐 **Admin Executive Portal:** [https://agrofinance-bd.onrender.com/#admin-gateway](https://agrofinance-bd.onrender.com/#admin-gateway)
+</div>
 
 ---
 
-## 📸 Platform Highlights & Key Capabilities
+## 📋 Table of Contents
 
+- [Overview & Value Proposition](#-overview--value-proposition)
+- [System Architecture](#-system-architecture)
+- [Core Features & Innovations](#-core-features--innovations)
+- [Cybersecurity Defense Architecture](#-cybersecurity-defense-architecture)
+- [User Roles & Access Control](#-user-roles--access-control)
+- [Technology Stack](#-technology-stack)
+- [Getting Started & Local Installation](#-getting-started--local-installation)
+- [Environment Configuration](#-environment-configuration)
+- [Automated Verification & Testing](#-automated-verification--testing)
+- [REST API Reference](#-rest-api-reference)
+- [Project Directory Structure](#-project-directory-structure)
+- [Deployment](#-deployment)
+- [License & Acknowledgments](#-license--acknowledgments)
+
+---
+
+## 🌟 Overview & Value Proposition
+
+Smallholder farmers and agricultural enterprises in emerging economies often lack access to formal institutional financing, while retail investors face high barriers when attempting to invest directly in real-world agricultural assets. 
+
+**AgroFinance BD** bridges this gap through a high-performance, secure digital fintech infrastructure featuring:
+- **Transparent Capital Allocation**: Direct asset-backed funding for verified farming cycles.
+- **Institutional Risk Mitigation**: Mandatory comprehensive agricultural weather-index insurance and crop protection.
+- **Precision Telemetry**: Satellite remote sensing (NDVI) and IoT ground sensors providing real-time crop canopy verification.
+- **Frictionless Mobile Finance**: Seamless digital wallet supporting Bangladesh Mobile Financial Services (**bKash**, **Nagad**, **Rocket**) and direct corporate bank wire transfers.
+- **Enterprise-Grade Security**: Hardened backend complying with **OWASP Top 10** standards, role-based access controls, and append-only SIEM audit logging.
+
+---
+
+## 🏛️ System Architecture
+
+```text
++-----------------------------------------------------------------------------------+
+|                                  CLIENT LAYER                                     |
+|           React 18 Single Page Application (SPA)  *  Tailwind CSS v3.4           |
+|        Interactive Chart.js Visualizations  *  Responsive Mobile/Desktop UI       |
++-----------------------------------------------------------------------------------+
+                                          |
+                                          |  HTTPS / REST / JWT Bearer
+                                          v
++-----------------------------------------------------------------------------------+
+|                                 SECURITY GATEWAY                                  |
+|         Helmet HTTP Headers  *  Rate Limiters  *  NoSQL Injection Sanitizer       |
+|            CSRF Verification  *  Bcrypt Password Hashing (10 Rounds)              |
++-----------------------------------------------------------------------------------+
+                                          |
+                                          v
++-----------------------------------------------------------------------------------+
+|                            APPLICATION LOGIC (EXPRESS.JS)                         |
+|   ├── Auth Controller (OTP Dispatch, Registration, JWT Verification, KYC)         |
+|   ├── Investment Engine (Commitment, Auto-Reinvest, Ownership Certificates)       |
+|   ├── Digital Wallet (bKash/Nagad/Rocket MFS & Bank Wire Reconciliation)          |
+|   ├── Farm Telemetry & IoT (NDVI Crop Health Scores, Weather Data)                |
+|   ├── AI Advisor Service (LLM Multi-Turn Portfolio Advisory)                      |
+|   └── Admin Governance & SIEM (KYC Approvals, Treasury Control, Threat Radar)     |
++-----------------------------------------------------------------------------------+
+                     |                                           |
+                     v                                           v
++------------------------------------------+   +------------------------------------+
+|               DATA STORAGE               |   |        EXTERNAL INTEGRATIONS       |
+|  * MongoDB Database (Production)         |   |  * Brevo REST API (HTTPS Port 443) |
+|  * High-Speed In-Memory JSON Persistence |   |  * OpenRouter AI LLM Engine        |
+|    (Zero-Dependency Fallback Engine)     |   |  * European Space Agency NDVI      |
++------------------------------------------+   +------------------------------------+
 ```
-+-----------------------------------------------------------------------------------+
-|                                 AgroFinance BD                                    |
-|   Direct & Insured Agri Investments in Bangladesh with High Sustainable Returns   |
-+-----------------------------------------------------------------------------------+
-|  [🌾 Explore Projects]  [📈 Interactive Analytics]  [💳 MFS & Bank Wallet]        |
-|  [🛰️ Satellite Farm IoT] [🤖 AI Agri-Advisor]        [📜 Digital Certificates]    |
-+-----------------------------------------------------------------------------------+
-```
+
+---
+
+## ✨ Core Features & Innovations
 
 ### 1. 📊 Interactive Portfolio Analytics & Data Visualizations
-- **Portfolio Growth Area Graph**: Monthly capital growth curve and accumulated returns tracking with live Chart.js rendering.
-- **Asset Allocation Doughnut Chart**: Visual risk diversification breakdown across Grains, Dairy, Fishery, Fruit Orchards, and High-Tech Greenhouses.
-- **Return Comparison Bar Chart**: Comparative yield analysis benchmarking AgroFinance yields against traditional FDR (Fixed Deposits), Sanchayapatra, and Capital Markets.
+- **Portfolio Growth Trajectory**: Dynamic area chart illustrating month-by-month invested capital growth and projected yield milestones.
+- **Asset Allocation Breakdown**: Real-time interactive doughnut chart categorizing portfolio exposure across Grains, Dairy, Fishery, Fruit Orchards, and High-Tech Greenhouses.
+- **Yield Comparison Matrix**: Live comparative bar chart benchmarking AgroFinance returns against standard Fixed Deposit Receipts (FDR), National Sanchayapatra savings bonds, and traditional capital markets.
 
 ### 2. 🛰️ Satellite Remote Sensing & IoT Farm Telemetry
-- **NDVI (Normalized Difference Vegetation Index)**: European Space Agency (ESA Sentinel-2) telemetry tracking crop canopy density and chlorophyll health indices (e.g. `0.78` - Optimal Vigorous Growth).
-- **Soil & Climate Telemetry**: Real-time soil moisture sensors, temperature probes, and smart solar-powered drip irrigation monitors.
+- **NDVI (Normalized Difference Vegetation Index)**: Integration with European Space Agency (ESA Sentinel-2) telemetry to measure live crop canopy density and chlorophyll absorption indices (e.g. `0.78` - Optimal Vigorous Growth).
+- **IoT Ground Telemetry**: Real-time environmental metrics displaying soil moisture percentages, ambient temperature, humidity levels, and automated drip irrigation status.
 
-### 3. 🚜 Complete Farm Traceability & Lifecycle Timeline
-Every agricultural project features a 5-stage verified lifecycle roadmap:
-- **Phase 1: Land Preparation & Organic Fertilization** (Soil treatment and seed selection)
-- **Phase 2: Automated Planting & Solar Drip Irrigation** (Precision water management)
-- **Phase 3: Growth & Biological Pest Management** (Pheromone traps, zero toxic pesticides)
-- **Phase 4: Mechanized Harvesting & Cold-Chain Processing** (Minimal post-harvest losses)
-- **Phase 5: Supermarket Wholesale Supply & Profit Distribution** (Contracted off-taker payout)
+### 3. 🚜 5-Stage Traceable Farm Lifecycle
+Every farming project features an audited, chronological 5-stage lifecycle tracker:
+1. **Phase 1: Land Preparation & Organic Fertilization** — Soil health analysis, pH balance testing, and certified seed procurement.
+2. **Phase 2: Automated Planting & Solar Drip Irrigation** — High-density precision planting utilizing solar-driven water conservation grids.
+3. **Phase 3: Biological Crop Care & Pest Control** — Eco-friendly pheromone trapping, organic bio-pesticides, and nutrient sprays.
+4. **Phase 4: Mechanized Harvesting & Cold-Chain Logistics** — Temperature-monitored post-harvest handling to eliminate spoilage.
+5. **Phase 5: Supermarket Wholesale Supply & Yield Payout** — Contracted off-take fulfillment and direct profit distribution to investor wallets.
 
-### 4. 📜 Insured Capital & Digital Contracts
-- **Weather Index & Natural Disaster Insurance**: Partnered with Green Delta / Sadharan Bima to shield investor principal from floods, seasonal cyclones, and severe droughts.
-- **Digital Certificates of Ownership**: Instant generation of official PDF-printable investment certificates with unique cryptographic Certificate IDs, QR authenticity badges, and co-contractor details.
+### 4. 📜 Insured Capital & Authenticated Digital Certificates
+- **Comprehensive Climate & Crop Insurance**: Partnered with institutional insurers to cover principal capital against unseasonal floods, droughts, pest outbreaks, and tropical cyclones.
+- **Digital Ownership Certificates**: Instant generation of printable official investment certificates equipped with unique Cryptographic Certificate IDs, digital signatures, legal terms, and verifiable QR codes.
 
-### 5. 🔄 Auto-Reinvest & Compound Wealth Engine
-- Flexible one-click toggle to automatically reinvest monthly dividend disbursements into the highest-rated active farming cycle, harnessing compound interest.
+### 5. 🔄 Automated Wealth Compounding Engine
+- Investor-controlled toggle to automatically reinvest scheduled monthly dividend disbursements into newly launched top-rated farming cycles, leveraging exponential compounding growth.
 
-### 6. 🧑‍🌾 ESG Sustainability & Farmer Impact Stories
-- Deep social impact tracking highlighting direct financial empowerment of marginalized rural farmers, women empowerment in dairy clusters, and localized rural job creation.
+### 6. 🧑‍🌾 ESG Sustainability & Rural Social Impact
+- Real-time transparency metrics tracking direct social benefits: rural female farmer employment rates, fair farmgate compensation indices, and reductions in chemical runoff.
 
-### 7. 🛡️ Institutional KYC & Nominee Security
-- Mandatory National ID (NID smart card) verification, e-TIN tax identification, and complete legal nominee assignment (Name, Relationship, Contact, NID) prior to capital commitment.
-- Instant admin review queue with document image preview.
+### 7. 💳 Multi-Channel Digital Wallet (Fintech Grade)
+- **Mobile Financial Services (MFS)**: Instant checkout and automated transaction reconciliation for **bKash**, **Nagad**, and **Rocket**.
+- **Commercial Bank Wire**: Corporate bank deposit reconciliation supporting major commercial banking institutions.
+- **Audited Withdrawal Queue**: Secure withdrawal requests to investor personal bank accounts or MFS numbers, protected by administrative verification.
 
-### 8. 💳 Multi-Channel Digital Wallet (Fintech Grade)
-- **Mobile Financial Services (MFS)**: Native checkout workflows for **bKash**, **Nagad**, and **Rocket** with instant transaction ID validation and 0% cash-in fees.
-- **Direct Corporate Bank Deposit**: Slip upload workflow for major commercial banks (Dutch-Bangla Bank, BRAC Bank, City Bank, Islami Bank) with treasury reconciliation.
-- **Instant Withdrawals**: Direct payout to investor bank accounts or MFS numbers with audited administrative disbursement approval.
+### 8. 🤖 Embedded AI Agricultural Investment Advisor
+- Multi-turn intelligent investment consultant powered by state-of-the-art LLMs.
+- Delivers real-time portfolio suggestions, risk assessments, harvest calendars, and agricultural commodity pricing trends in both English and Bengali.
 
-### 9. 🤖 AI Agricultural Investment Advisor
-- Embedded intelligent AI consultant powered by OpenRouter / LLM APIs.
-- Provides personalized portfolio recommendations, risk profiling, harvest calendar insights, and market price trend analysis in English and Bengali.
+### 9. 👑 360° Admin Executive Governance Gateway (`#admin-gateway`)
+- **Discrete Entrypoint**: Isolated administrative gateway accessible strictly via authenticated administrator routes (`#admin-gateway` or `/admin`).
+- **KYC Verification Workflow**: High-resolution NID document inspector with one-click approval, rejection notes, and audit tagging.
+- **Financial Treasury Moderation**: Centralized queue to approve or reject deposits and withdrawals with automated wallet rollback on rejection.
+- **Project CMS**: Full lifecycle project management to add, update, pause, or mature agribusiness projects.
+- **SIEM Cybersecurity Threat Radar**: Real-time audit log streaming client IP addresses, user agents, failed access attempts, and live security health scores.
 
-### 10. 👑 360° Admin Executive Control Station (`#admin-gateway`)
-- **Completely Isolated Access Gateway**: Zero administrative references on public landing areas. Accessible strictly via `#admin-gateway` or `/admin` routes.
-- **KYC & Identity Approval Queue**: Inspect submitted investor NID smart cards, verify credentials, and approve or reject with audit notes.
-- **Financial Transaction Moderation**: One-click approvals for wallet deposits and withdrawals. Automatic wallet balance rollback on rejected transactions.
-- **Project Lifecycle Manager**: Create, edit, and publish agricultural projects, set return rates, configure unit caps, and upload farm gallery imagery.
-- **Account Freeze / Unfreeze Enforcement**: Instant account freezing for compliance violations with immediate HTTP 403 API revocation.
-- **Live SIEM Cyber Threat Radar**: Real-time streaming audit logs recording IP addresses, user agents, attack attempts, and platform security posture score (98/100).
-
-### 11. 📧 Enterprise Transactional Email System (Brevo HTTP API)
-- **Port 443 HTTPS REST API**: Eliminates cloud firewall SMTP restrictions (Render/AWS free tier SMTP blocks) for guaranteed sub-second delivery.
-- **Branded HTML Email Templates**: Clean, responsive, dual-language emails for verification codes, password resets, farm visit confirmations, and deposit receipts.
-- **Gmail SMTP Hybrid Fallback**: Automatic local SMTP fallback when running in development environments.
+### 10. 📧 Enterprise Transactional Email Service (Brevo HTTP API)
+- **Direct HTTPS REST Integration**: Uses Brevo REST API over outbound Port 443 to guarantee sub-second OTP and notification delivery, bypassing cloud platform SMTP outbound blocks.
+- **Branded Notification Templates**: Dual-language responsive HTML email templates for 6-digit registration OTPs, password reset codes, and transaction receipts.
+- **Hybrid Local Fallback**: Configured with automatic SMTP fallback for offline local testing environments.
 
 ---
 
 ## 🛡️ Cybersecurity Defense Architecture
 
-AgroFinance BD is built from the ground up adhering to the **OWASP Top 10 Enterprise Financial Security Standards**:
+AgroFinance BD is architected following the **OWASP Top 10 Financial Application Security Guidelines**:
 
-| Cyber Threat Vector | Security Defense Layer Implemented |
+| Security Threat | Applied Mitigation Layer |
 |---|---|
-| **BOLA / IDOR (Broken Object Authorization)** | Strict cryptographic verification of object ownership (`req.user.id === resource.userId`). Cross-tenant access attempts trigger security alerts and immediate HTTP 403 denial. |
-| **Credential Stuffing & Brute Force** | Multi-tier `express-rate-limit` rate-limiting. Failed authentication counter with progressive lockouts and IP-level throttling. |
-| **NoSQL & Parameter Injection** | Deep sanitization middleware stripping MongoDB logical operators (`$gt`, `$ne`, `$where`, `$regex`) across query strings, headers, and request bodies. |
-| **Cross-Site Scripting (XSS) & Clickjacking** | HTTP Security Headers enforced via `Helmet`: `Content-Security-Policy (CSP)`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Strict-Transport-Security`. |
-| **Cross-Site Request Forgery (CSRF)** | Custom CSRF headers and strict Origin/Referer header verification on mutating state routes (`POST`, `PUT`, `DELETE`). |
-| **Account Freeze Enforcement** | Suspended or frozen accounts are immediately blocked at the authentication middleware layer from initiating transactions or investments. |
-| **Password Cryptography** | Salted password hashing with `bcrypt` (10 rounds). Passwords never stored or returned in plaintext. |
-| **SIEM Security Audit Logging** | Append-only event logging tracking logins, password updates, KYC status modifications, and admin overrides with IP and User-Agent capture. |
+| **Broken Object Level Authorization (BOLA / IDOR)** | Cryptographic verification ensuring `req.user.id === resource.ownerId`. Unauthorized cross-tenant queries trigger instant HTTP 403 denial and SIEM logging. |
+| **Brute Force & Credential Stuffing** | Tiered rate-limiting via `express-rate-limit` on all authentication and OTP verification routes, with progressive IP throttling. |
+| **NoSQL & Parameter Injection** | Deep sanitization middleware intercepting and stripping MongoDB logical operator injection vectors (`$gt`, `$ne`, `$where`, `$regex`) across query, body, and params. |
+| **Cross-Site Scripting (XSS) & Clickjacking** | Strict HTTP security headers enforced by `Helmet`: `Content-Security-Policy (CSP)`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, and HSTS. |
+| **Cross-Site Request Forgery (CSRF)** | Custom request header verification coupled with strict Origin and Referer validation on state-mutating endpoints (`POST`, `PUT`, `DELETE`). |
+| **Account Freeze Enforcement** | Suspended or frozen accounts are immediately blocked at the middleware gateway from initiating financial transactions or updating records. |
+| **Data Encryption & Passwords** | Cryptographic salted password hashing using `bcrypt` (10 rounds). Passwords and OTP secrets are never logged or returned in responses. |
+| **SIEM Audit Logging** | Immutable security event logging capturing client IP, timestamp, user agent, and mutation payload for all administrative and authentication events. |
 
 ---
 
-## 🏗️ Technology Stack
+## 👥 User Roles & Access Control
 
-```
-+----------------------------------------------------------------------------+
-|                                FRONTEND                                    |
-|   React 18  *  Tailwind CSS v3.4  *  Chart.js  *  Babel Standalone Classic  |
-|   Dual Language Support (বাংলা / English)  *  Mobile-First Responsive UI    |
-+----------------------------------------------------------------------------+
-                                      |
-                                      v
-+----------------------------------------------------------------------------+
-|                             BACKEND API                                    |
-|   Node.js (v18+)  *  Express.js  *  JWT (HMAC-SHA256)  *  Helmet Security  |
-|   Bcrypt Hashing  *  Express Rate Limit  *  Input Sanitizer Middleware    |
-+----------------------------------------------------------------------------+
-                                      |
-                       +--------------+--------------+
-                       |                             |
-                       v                             v
-+-------------------------------+   +----------------------------------------+
-|           DATABASE            |   |           EXTERNAL SERVICES            |
-|   MongoDB Native Driver       |   |   Brevo REST API (Transactional Email) |
-|   In-Memory Zero-Config Engine|   |   OpenRouter AI (GPT-4o-mini Advisor)  |
-|   Atomic JSON Persistence     |   |   Gmail SMTP (Local Development)       |
-+-------------------------------+   +----------------------------------------+
+AgroFinance BD implements strict Role-Based Access Control (RBAC):
+
+```text
+[ Public Visitor ]
+       │
+       ▼ (Register & Email OTP Verification)
+[ Registered Investor ] 
+       │
+       ▼ (Complete NID Smart Card & Nominee KYC)
+[ Verified Investor ] ───> Full Investment, Wallet, & Certificate Privileges
+       │
+[ System Administrator ] ───> Discrete Governance Gateway (#admin-gateway)
 ```
 
+1. **Public Visitor**:
+   - Explore active and upcoming agricultural projects.
+   - Run interactive ROI calculations and financial projections.
+   - Inspect live commodity market wholesale prices and satellite NDVI metrics.
+
+2. **Registered Investor**:
+   - Self-registers via email with a 6-digit cryptographic OTP dispatched in real time.
+   - Accesses investor dashboard, browses project details, and reviews platform analytics.
+
+3. **Verified Investor (KYC Completed)**:
+   - Submits National ID (NID smart card) and legal nominee details for administrative approval.
+   - Deposits and withdraws funds via MFS (bKash/Nagad/Rocket) or commercial bank transfer.
+   - Commits capital to active farming projects, earns returns, downloads PDF certificates, and enables auto-reinvestment.
+
+4. **System Administrator**:
+   - Accesses the discrete administrative command center via `#admin-gateway`.
+   - Reviews and approves/rejects investor KYC submissions and nominee documents.
+   - Reconciles and authorizes wallet deposit and withdrawal transactions.
+   - Creates, configures, and publishes agricultural project listings.
+   - Enforces compliance account freezing and monitors live SIEM security alerts.
+
 ---
 
-## 🔑 Official Test Credentials
+## 🛠️ Technology Stack
 
-> **Note:** Demo bypass buttons have been removed in favor of authentic authentication workflows. Use the official pre-seeded accounts below:
-
-| Role | Email | Password | Access Privileges |
-|---|---|---|---|
-| **Investor** | `ahmed@agrofinance.bd` | `User@123456` | Dashboard, Wallet, Investments, Certificates, Analytics, KYC |
-| **Investor (Personal)** | `cse12105048@gmail.com` | `User@123456` | Verified Investor with ৳500,000 demo wallet balance |
-| **Administrator** | `admin@agrofinance.bd` | `Admin@123456` | KYC Approvals, Financial Moderation, Project CMS, SIEM Radar |
-
-- **Admin Gateway URL:** [https://agrofinance-bd.onrender.com/#admin-gateway](https://agrofinance-bd.onrender.com/#admin-gateway)
+| Domain | Technologies & Libraries |
+|---|---|
+| **Frontend Framework** | React 18, Babel Standalone (Pre-compiled production bundle) |
+| **Styling & UI Components** | Tailwind CSS v3.4, Lucide Icons, Custom Animated Modals |
+| **Data Visualizations** | Chart.js 4.x (Portfolio Growth, Risk Allocation Doughnut, Comparative Yield Bar) |
+| **Backend Runtime** | Node.js (v18+ LTS), Express.js |
+| **Security & Auth** | JSON Web Tokens (JWT), Bcrypt.js, Helmet, Express Rate Limit, Input Sanitizers |
+| **Primary Database** | MongoDB with Mongoose ODM |
+| **High-Speed Fallback DB** | Zero-Configuration In-Memory JSON Persistence Engine |
+| **Transactional Email** | Brevo HTTP REST API (Port 443), Nodemailer (Local Fallback) |
+| **AI Advisory Engine** | OpenRouter REST API (GPT-4o-mini integration) |
+| **Cloud Hosting** | Render Cloud Platform (Automated CI/CD Git deploys) |
 
 ---
 
-## 🚀 Getting Started (Local Development)
+## ⚙️ Getting Started & Local Installation
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) v18.0.0 or higher
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended)
+- [npm](https://www.npmjs.com/) (v9.0.0 or higher)
 - [Git](https://git-scm.com/)
-- (Optional) [MongoDB](https://www.mongodb.com/) running locally on port `27017` *(If MongoDB is not installed, the system automatically runs with the high-performance In-Memory JSON database with zero setup).*
+- *(Optional)* [MongoDB](https://www.mongodb.com/) running locally on port `27017`. *(If MongoDB is not installed, the platform automatically initializes its high-performance In-Memory JSON engine with zero extra setup).*
 
-### 1. Clone the Repository
+### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/jibontara780-ctrl/agrofinance-bd.git
 cd agrofinance-bd
 ```
 
-### 2. Install Dependencies
+### Step 2: Install Dependencies
 ```bash
 npm install
 ```
 
-### 3. Configure Environment Variables
-Create a `.env` file in the project root:
-```env
-PORT=5001
-NODE_ENV=development
-JWT_SECRET=agrofinance_jwt_super_secret_key_2026_hs256_production_grade
-MONGO_URI=mongodb://127.0.0.1:27017/agrofinance_db
+### Step 3: Configure Environment Variables
+Create a `.env` file in the project root directory based on the template below:
+```bash
+cp .env.example .env
+```
+*(See [Environment Configuration](#-environment-configuration) for all supported parameters).*
 
-# Brevo HTTP Email API Configuration (Port 443 - Recommended)
-BREVO_API_KEY=your_brevo_api_key_here
-BREVO_SENDER=your_verified_brevo_email@gmail.com
-
-# Or Gmail SMTP (Works on local machine)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
-SMTP_USER=your_gmail@gmail.com
-SMTP_PASS=your_gmail_16_char_app_password
-EMAIL_FROM="AgroFinance BD" <security@agrofinance.bd>
-
-# AI Advisor (OpenRouter API)
-OPENROUTER_API_KEY=your_openrouter_api_key
+### Step 4: Assemble Frontend Assets
+The platform utilizes a modular JSX frontend architecture that is assembled into a high-performance production bundle:
+```bash
+node client_src/assemble.js
 ```
 
-### 4. Build and Run
+### Step 5: Start the Application Server
 ```bash
-# Compile and assemble JSX modules into pure client bundle
-node client_src/assemble.js
-
-# Launch the platform server
+npm start
+# or for development mode:
 node server/server.js
 ```
 
-Open your browser and navigate to:
+Navigate to your local browser:
 👉 **`http://localhost:5001`**
 
-### 5. Run Automated Verification Tests
-Execute the comprehensive 26-point in-memory security and functional test suite:
+---
+
+## 🔐 Environment Configuration
+
+Create a `.env` file in the root directory. **Never commit actual credentials or secret keys to version control.**
+
+```env
+# Server Configuration
+PORT=5001
+NODE_ENV=development
+
+# JWT Cryptographic Secret
+JWT_SECRET=<your-256-bit-jwt-secret-key>
+
+# Database Connection (MongoDB URI or leave empty for In-Memory DB)
+MONGO_URI=mongodb://127.0.0.1:27017/agrofinance_db
+
+# Brevo HTTP Email API (Recommended for Cloud Deployments)
+BREVO_API_KEY=<your-brevo-api-key>
+BREVO_SENDER=<your-verified-brevo-sender-email>
+
+# Optional SMTP Configuration (Local Development Fallback)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_USER=<your-smtp-username>
+SMTP_PASS=<your-smtp-app-password>
+EMAIL_FROM="AgroFinance BD" <security@yourdomain.com>
+
+# Optional AI Advisor (OpenRouter API)
+OPENROUTER_API_KEY=<your-openrouter-api-key>
+```
+
+---
+
+## 🧪 Automated Verification & Testing
+
+AgroFinance BD includes a comprehensive automated test suite validating security policies, authentication flows, mathematical dividend payouts, and transaction integrity:
+
 ```bash
 node server/test_in_memory.js
 ```
-Expected output: `🎉 ALL 26 IN-MEMORY VERIFICATION TESTS PASSED (100%)!`
+
+**Test Coverage Highlights:**
+- ✅ User registration & OTP cryptographic generation
+- ✅ Password hashing & JWT signing/verification
+- ✅ BOLA / IDOR protection & authorization boundaries
+- ✅ Wallet deposit reconciliation & withdrawal verification
+- ✅ Investment creation, unit caps, and portfolio allocation
+- ✅ Automated maturity profit calculations
+- ✅ NID KYC document submission and administrative approval
+- ✅ Account freeze enforcement and transaction revocation
+- ✅ SIEM audit logging verification
+
+---
+
+## 📡 REST API Reference
+
+### Authentication & Account Security
+| Method | Endpoint | Description | Access |
+|---|---|---|---|
+| `POST` | `/api/auth/register` | Register new user & dispatch 6-digit OTP | Public |
+| `POST` | `/api/auth/verify-email` | Validate OTP code & activate account | Public |
+| `POST` | `/api/auth/login` | Authenticate investor & receive signed JWT | Public |
+| `POST` | `/api/auth/admin-login` | Dedicated authentication for administrators | Public |
+| `POST` | `/api/auth/forgot-password` | Dispatch password reset OTP to email | Public |
+| `POST` | `/api/auth/reset-password` | Set new password with validated OTP | Public |
+| `GET` | `/api/auth/me` | Fetch authenticated profile & wallet balance | Authenticated |
+| `POST` | `/api/auth/kyc` | Submit NID smart card and nominee details | Authenticated |
+
+### Projects & Investments
+| Method | Endpoint | Description | Access |
+|---|---|---|---|
+| `GET` | `/api/projects` | List all active, funded, and upcoming projects | Public |
+| `GET` | `/api/projects/:id` | Get project telemetry, NDVI score, and specs | Public |
+| `POST` | `/api/investments` | Commit investment capital to active project | Verified Investor |
+| `GET` | `/api/investments/my` | Retrieve authenticated user's portfolio | Authenticated |
+
+### Digital Wallet & Treasury
+| Method | Endpoint | Description | Access |
+|---|---|---|---|
+| `POST` | `/api/wallet/deposit` | Submit bKash / Nagad / Bank deposit request | Authenticated |
+| `POST` | `/api/wallet/withdraw` | Submit capital withdrawal request | Verified Investor |
+| `GET` | `/api/wallet/transactions` | Fetch user transaction history ledger | Authenticated |
+
+### Administrative Governance (`#admin-gateway`)
+| Method | Endpoint | Description | Access |
+|---|---|---|---|
+| `GET` | `/api/admin/stats` | Platform treasury, revenue, and investor stats | Administrator |
+| `POST` | `/api/admin/kyc/status` | Approve or reject submitted investor KYC | Administrator |
+| `POST` | `/api/admin/transactions/approve` | Approve pending deposit or withdrawal | Administrator |
+| `POST` | `/api/admin/transactions/reject` | Reject transaction with wallet rollback | Administrator |
+| `POST` | `/api/admin/users/freeze` | Freeze or unfreeze user account | Administrator |
+| `GET` | `/api/admin/security` | Stream live SIEM audit events and security score | Administrator |
 
 ---
 
 ## 📁 Project Directory Structure
 
-```
-agro-investment-system/
+```text
+agrofinance-bd/
 ├── client/                     # Assembled production frontend bundle
-│   └── index.html              # Pre-compiled high-performance SPA bundle
+│   └── index.html              # Pre-compiled high-performance SPA
 ├── client_src/                 # Modular JSX frontend source components
-│   ├── 01_head_app.jsx         # App routing, navbar, navigation, state orchestration
-│   ├── 02_landing_dashboard.jsx# Hero landing page, feature highlights, investor dashboard
-│   ├── 03_projects_portfolio_market_impact.jsx # Project cards, portfolio, commodity market, ESG
+│   ├── 01_head_app.jsx         # Navigation, language state & client routing
+│   ├── 02_landing_dashboard.jsx# Hero landing page, ROI calculator, investor dashboard
+│   ├── 03_projects_portfolio_market_impact.jsx # Projects, portfolio, commodity index, ESG
 │   ├── 04_farm_satellite.jsx   # Satellite NDVI remote sensing, IoT telemetry & farm tour
-│   ├── 05_admin_portal.jsx     # Admin 360 executive control panel & SIEM security radar
-│   ├── 06_modals.jsx           # Auth modals, MFS deposit/withdraw, investment confirmation
-│   └── assemble.js             # Automated Babel compiler and bundler script
-├── server/                     # Backend API & Business Logic
-│   ├── server.js               # Express application entrypoint & middleware configuration
+│   ├── 05_admin_portal.jsx     # Admin 360 executive control panel & SIEM radar
+│   ├── 06_modals.jsx           # Auth modals, OTP verification, MFS wallet, KYC upload
+│   └── assemble.js             # Babel compilation and bundler engine
+├── server/                     # Backend API & business logic
+│   ├── server.js               # Express application entrypoint & middleware setup
 │   ├── config/
-│   │   └── db.js               # Hybrid database connector (MongoDB + In-Memory fallback)
+│   │   └── db.js               # Dual-engine database driver (MongoDB + In-Memory)
 │   ├── controllers/
-│   │   ├── authController.js   # Authentication, registration, OTP validation, profile
+│   │   ├── authController.js   # Authentication, OTP dispatch, profile, KYC
 │   │   ├── adminController.js  # KYC review, financial moderation, project CMS, audits
 │   │   ├── investmentController.js # Investment creation, maturity payouts, returns
 │   │   ├── walletController.js # Deposits, withdrawals, transaction history
-│   │   ├── projectController.js# Agribusiness project CRUD and statistics
-│   │   ├── marketController.js # Agricultural commodity wholesale price index
-│   │   ├── farmVisitController.js # Farm visit schedule bookings
+│   │   ├── projectController.js# Agribusiness project CRUD and metrics
+│   │   ├── marketController.js # Commodity market wholesale prices
+│   │   ├── farmVisitController.js # Physical farm visit bookings
 │   │   └── aiController.js     # AI Agricultural Investment Advisor integration
 │   ├── middleware/
-│   │   ├── auth.js             # JWT bearer verification and role-based access control
+│   │   ├── auth.js             # JWT bearer verification and RBAC enforcement
 │   │   └── security.js         # Helmet headers, rate limiters, input sanitizers
-│   ├── models/                 # Data model definitions & schemas
+│   ├── models/                 # Mongoose schemas and data models
 │   ├── routes/
-│   │   └── api.js              # Central Express API route definitions
-│   ├── services/
+│   │   └── api.js              # Central REST API routes definition
 │   ├── utils/
-│   │   └── emailService.js     # Dual-engine email dispatcher (Brevo HTTP + Gmail SMTP)
+│   │   └── emailService.js     # Dual-engine email dispatcher (Brevo HTTP + SMTP)
 │   ├── data/
-│   │   └── seedData.js         # Pre-seeded agribusiness projects & verified users
+│   │   └── seedData.js         # Agricultural projects & pre-configured seed records
 │   └── test_in_memory.js       # 26-point automated verification test suite
 ├── render.yaml                 # Infrastructure-as-Code blueprint for Render deployment
-├── package.json                # Root package configuration and script triggers
-└── README.md                   # Project documentation & reference manual
+├── package.json                # Project dependencies and operational scripts
+└── README.md                   # Comprehensive project documentation
 ```
 
 ---
 
-## 📡 Core REST API Endpoints
+## 🚀 Deployment
 
-### Authentication & Profile
-- `POST /api/auth/register` — Create investor account & dispatch 6-digit OTP
-- `POST /api/auth/verify-email` — Verify cryptographic OTP & activate account
-- `POST /api/auth/login` — Authenticate investor & receive signed JWT
-- `POST /api/auth/admin-login` — Dedicated gateway login for system administrators
-- `POST /api/auth/forgot-password` — Dispatch password reset OTP to email
-- `POST /api/auth/reset-password` — Set new password using verified 6-digit OTP
-- `GET /api/auth/me` — Retrieve active authenticated user profile & balance
-- `POST /api/auth/kyc` — Submit NID smart card and nominee details
+The repository includes a ready-to-deploy [`render.yaml`](render.yaml) blueprint for one-click deployment on Render:
 
-### Projects & Investments
-- `GET /api/projects` — Fetch active, funded, and upcoming agribusiness projects
-- `GET /api/projects/:id` — Detailed project telemetry, NDVI score, and financial terms
-- `POST /api/investments` — Commit capital to an active project
-- `GET /api/investments/my` — Retrieve authenticated user's portfolio and certificates
-
-### Digital Wallet & Treasury
-- `POST /api/wallet/deposit` — Submit MFS or Bank Wire deposit request
-- `POST /api/wallet/withdraw` — Request capital/profit withdrawal to bank account
-- `GET /api/wallet/transactions` — Fetch audited transaction history
-
-### Admin Control & Governance
-- `GET /api/admin/stats` — High-level platform treasury and investor analytics
-- `POST /api/admin/kyc/status` — Approve or reject investor KYC documents
-- `POST /api/admin/transactions/approve` — Approve pending deposit or withdrawal
-- `POST /api/admin/users/freeze` — Suspend/freeze user account for compliance
-- `GET /api/admin/security` — Stream live SIEM cybersecurity audit events
+1. Push your code to GitHub.
+2. Link the repository to your [Render Dashboard](https://dashboard.render.com).
+3. Set the required environment variables in Render:
+   - `JWT_SECRET`
+   - `BREVO_API_KEY`
+   - `BREVO_SENDER`
+4. Render automatically runs `npm install`, executes `node client_src/assemble.js`, and launches `node server/server.js`.
 
 ---
 
-## ⚖️ License & Intellectual Property
+## ⚖️ License & Acknowledgments
 
-This project is licensed under the **MIT License**. You are free to modify, distribute, and integrate this software into proprietary and commercial applications with proper attribution.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for full details.
 
----
+Developed with a focus on modern fintech standards, agricultural sustainability, and digital financial inclusion in Bangladesh.
 
-<p align="center">
-  <b>AgroFinance BD Limited</b><br>
-  <i>Empowering Sustainable Agribusiness Growth & Digital Fintech Inclusion in Bangladesh</i><br>
-  Dhaka, Bangladesh • <a href="https://agrofinance-bd.onrender.com">https://agrofinance-bd.onrender.com</a>
-</p>
+<div align="center">
+
+**AgroFinance BD Limited**  
+*Dhaka, Bangladesh*  
+[https://agrofinance-bd.onrender.com](https://agrofinance-bd.onrender.com)
+
+</div>
