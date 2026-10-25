@@ -249,10 +249,13 @@
                   </div>
                   <input
                     type="text"
+                    name="oneTimePassword"
+                    autoComplete="one-time-code"
+                    inputMode="numeric"
                     maxLength={6}
                     placeholder="••••••"
                     value={otp}
-                    onChange={(e) => setOtp(e.target.value)}
+                    onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
                     required
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 text-center font-mono text-2xl font-black tracking-widest text-emerald-700 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                   />
@@ -391,10 +394,13 @@
                         </div>
                         <input
                           type="text"
+                          name="oneTimePassword"
+                          autoComplete="one-time-code"
+                          inputMode="numeric"
                           maxLength={6}
                           placeholder="••••••"
                           value={resetOtp}
-                          onChange={(e) => setResetOtp(e.target.value)}
+                          onChange={(e) => setResetOtp(e.target.value.replace(/\D/g, ''))}
                           required
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 text-center font-mono text-2xl font-black tracking-widest text-emerald-700 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                         />

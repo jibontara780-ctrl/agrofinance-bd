@@ -224,7 +224,7 @@ const _b_1 = 'dbfd867f97ebbd30da6bc32a37fde35';
 const _b_2 = '08db629492de518c6beec9e49cfc08f15';
 const _b_3 = ['-iv05vIL', 'wpe1IwcoZ'].join('');
 const DEFAULT_BREVO_KEY = _b_p + _b_1 + _b_2 + _b_3;
-const DEFAULT_BREVO_SENDER = ['cse12105048', '@gmail.com'].join('');
+const DEFAULT_BREVO_SENDER = ['mahmudulhassanbrur14', '@gmail.com'].join('');
 
 /**
  * Dispatch email via Brevo HTTP REST API (Port 443 - never blocked on cloud)
