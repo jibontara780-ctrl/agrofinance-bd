@@ -54,6 +54,20 @@
   </script>
 
   <style>
+    html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden !important;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    #root {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden !important;
+      position: relative;
+    }
     :root, body, #root, .font-sans {
       font-family: 'Hind Siliguri', 'Noto Sans Bengali', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
       background-color: #f8fafc;
@@ -759,7 +773,7 @@
       }, [investments]);
 
       return (
-        <div className={`min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-emerald-500 selection:text-white ${lang === 'bn' ? 'font-bengali' : ''}`} lang={lang}>
+        <div className={`min-h-screen flex flex-col w-full max-w-full overflow-x-hidden bg-slate-50 text-slate-900 selection:bg-emerald-500 selection:text-white ${lang === 'bn' ? 'font-bengali' : ''}`} lang={lang}>
           
           {/* Toast Notification */}
           {toastMsg && (
@@ -772,32 +786,32 @@
           )}
 
           {/* TOP ANNOUNCEMENT BANNER */}
-          <div className="bg-slate-950 text-emerald-400 text-[11px] font-bold py-1.5 px-4 text-center border-b border-emerald-950/40 flex items-center justify-center gap-3">
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>{t.bannerSecurity}</span>
+          <div className="bg-slate-950 text-emerald-400 text-[10px] sm:text-[11px] font-bold py-1.5 px-3 sm:px-4 text-center border-b border-emerald-950/40 flex items-center justify-center gap-2 sm:gap-3 w-full overflow-hidden">
+            <span className="inline-flex items-center gap-1.5 truncate">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+              <span className="truncate">{t.bannerSecurity}</span>
             </span>
             <span className="hidden md:inline text-slate-600">•</span>
             <span className="hidden md:inline text-amber-300">{t.bannerInsured}</span>
           </div>
 
           {/* MAIN NAVBAR */}
-          <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
+          <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2 sm:gap-4">
               
               {/* Brand Logo */}
               <div
-                className="flex items-center gap-2.5 cursor-pointer shrink-0"
+                className="flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0"
                 onClick={() => setActiveTab(user?.role === 'admin' ? 'admin' : 'landing')}
               >
-                <div className="w-10 h-10 rounded-2xl gradient-agro flex items-center justify-center text-xl shadow-md text-white font-bold shrink-0">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl gradient-agro flex items-center justify-center text-lg sm:text-xl shadow-md text-white font-bold shrink-0">
                   🌾
                 </div>
                 <div>
-                  <div className="text-xl font-black tracking-tight text-slate-900 leading-none">
+                  <div className="text-lg sm:text-xl font-black tracking-tight text-slate-900 leading-none">
                     AgroFinance <span className="text-emerald-600">BD</span>
                   </div>
-                  <div className="text-[10px] font-bold text-emerald-700 tracking-wider">
+                  <div className="hidden sm:block text-[10px] font-bold text-emerald-700 tracking-wider">
                     {user?.role === 'admin' ? t.taglineAdmin : t.taglineUser}
                   </div>
                 </div>
@@ -1047,7 +1061,7 @@
                     </div>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2">
+                  <div className="hidden sm:flex items-center gap-2">
                     <button
                       onClick={() => {
                         setAuthMode('login');
@@ -1072,7 +1086,7 @@
                 {/* Mobile Menu Toggle Button */}
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className="md:hidden p-2 rounded-xl border border-slate-200 text-slate-700"
+                  className="md:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 transition"
                 >
                   ☰
                 </button>
@@ -1143,6 +1157,30 @@
                         <span>{t.navSignOut}</span>
                       </button>
                     )}
+                    {!user && (
+                      <div className="pt-2 border-t border-slate-100 flex gap-2">
+                        <button
+                          onClick={() => {
+                            setAuthMode('login');
+                            setAuthModalOpen(true);
+                            setMobileMenuOpen(false);
+                          }}
+                          className="flex-1 text-center py-2.5 rounded-xl border border-slate-200 font-bold text-slate-700 hover:bg-slate-50 transition"
+                        >
+                          {t.navLogin}
+                        </button>
+                        <button
+                          onClick={() => {
+                            setAuthMode('register');
+                            setAuthModalOpen(true);
+                            setMobileMenuOpen(false);
+                          }}
+                          className="flex-1 text-center py-2.5 rounded-xl gradient-agro text-white font-black shadow-xs transition"
+                        >
+                          {t.navRegister}
+                        </button>
+                      </div>
+                    )}
                   </>
                 )}
               </div>
@@ -1150,7 +1188,7 @@
           </header>
 
           {/* MAIN APPLICATION ROUTING */}
-          <main className="flex-1">
+          <main className="flex-1 w-full max-w-full overflow-x-hidden">
             {activeTab === 'landing' && (
               <LandingView
                 lang={lang}

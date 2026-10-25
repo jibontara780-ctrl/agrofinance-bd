@@ -113,7 +113,7 @@
       ];
 
       return (
-        <div className="space-y-24 animate-fade-in">
+        <div className="space-y-24 animate-fade-in w-full max-w-full overflow-x-hidden">
           
           {/* HERO SECTION */}
           <section className="relative overflow-hidden pt-12 pb-24 bg-gradient-to-b from-slate-950 via-slate-900 to-emerald-950 text-white rounded-b-[2.5rem] shadow-2xl">
