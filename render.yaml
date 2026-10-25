@@ -3,6 +3,7 @@ services:
     name: agrofinance-bd
     env: node
     plan: free
+    region: singapore
     buildCommand: npm install && cd server && npm install && cd .. && node client_src/assemble.js
     startCommand: cd server && node server.js
     envVars:
@@ -12,5 +13,3 @@ services:
         value: 10000
       - key: JWT_SECRET
         generateValue: true
-      - key: OPENROUTER_API_KEY
-        sync: false
