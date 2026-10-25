@@ -1,0 +1,22 @@
+{
+  "name": "agro-investment-management-system",
+  "version": "1.0.0",
+  "description": "Full MERN Stack Agriculture Investment Management System for Bangladesh",
+  "main": "server/server.js",
+  "scripts": {
+    "build": "node client_src/assemble.js",
+    "start": "NODE_PATH=./server/node_modules node server/server.js",
+    "server": "NODE_PATH=./server/node_modules node server/server.js",
+    "dev": "NODE_PATH=./server/node_modules node server/server.js",
+    "test": "NODE_PATH=./server/node_modules node server/test_in_memory.js"
+  },
+  "keywords": [
+    "mern",
+    "agriculture",
+    "investment-management",
+    "bangladesh-agro",
+    "fintech"
+  ],
+  "author": "AgroFinance BD",
+  "license": "ISC"
+}
