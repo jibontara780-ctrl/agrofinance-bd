@@ -1228,6 +1228,7 @@
                 onExploreProjects={() => setActiveTab('projects')}
                 showToast={showToast}
                 onUserUpdate={loadUser}
+                onOpenFarmTour={handleOpenFarmTour}
               />
             )}
 

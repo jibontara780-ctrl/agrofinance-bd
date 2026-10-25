@@ -359,7 +359,7 @@
               </p>
             </div>
             <button
-              onClick={onOpenFarmTour}
+              onClick={onOpenFarmTour || (() => {})}
               className="px-6 py-3.5 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg active:scale-95 transition shrink-0 flex items-center gap-2 group"
             >
               <span>{isBn ? 'খামার পরিদর্শনের বুকিং' : 'Schedule Farm Tour'}</span>
@@ -374,7 +374,7 @@
     // ==========================================
     // PORTFOLIO VIEW
     // ==========================================
-    function PortfolioView({ lang = 'bn', user, investments = [], projects = [], token, onViewCertificate, onExploreProjects, showToast, onUserUpdate }) {
+    function PortfolioView({ lang = 'bn', user, investments = [], projects = [], token, onViewCertificate, onExploreProjects, showToast, onUserUpdate, onOpenFarmTour }) {
       const isBn = lang === 'bn';
       const [filter, setFilter] = React.useState('all');
 
@@ -583,7 +583,7 @@
               </p>
             </div>
             <button
-              onClick={onOpenFarmTour}
+              onClick={onOpenFarmTour || (() => {})}
               className="px-6 py-3.5 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg active:scale-95 transition shrink-0 flex items-center gap-2 group"
             >
               <span>{isBn ? 'খামার পরিদর্শনের বুকিং' : 'Schedule Farm Tour'}</span>

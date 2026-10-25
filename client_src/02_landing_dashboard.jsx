@@ -529,7 +529,7 @@
                 </p>
               </div>
               <button
-                onClick={onOpenFarmTour}
+                onClick={onOpenFarmTour || (() => {})}
                 className="px-6 py-3.5 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg active:scale-95 transition shrink-0 flex items-center gap-2 group"
               >
                 <span>{isBn ? 'খামার পরিদর্শনের বুকিং' : 'Schedule Farm Tour'}</span>
@@ -785,7 +785,7 @@
                   </button>
 
                   <button
-                    onClick={onOpenFarmTour}
+                    onClick={onOpenFarmTour || (() => {})}
                     className="w-full p-3.5 rounded-2xl bg-emerald-50/70 hover:bg-emerald-100/70 border border-emerald-200 text-emerald-900 font-bold text-xs flex items-center justify-between transition"
                   >
                     <span className="flex items-center gap-2">
