@@ -400,10 +400,10 @@
     {
       "_id": "usr_1791922216637_004cue",
       "id": "usr_1791922216637_004cue",
-      "name": "Demo User",
-      "email": "demo_user_01@agrofinance.bd",
+      "name": "Mahmudul hassan",
+      "email": "cse12105048brur@gamil.com",
       "password": "$2b$10$TqhH/qLhAVkDtGbHFG.hd.rxpx7d19rCjYuTUCQEonaZojnq/CaU2",
-      "phone": "01727000000",
+      "phone": "01727119995",
       "nid": "",
       "address": "",
       "role": "investor",
@@ -630,36 +630,6 @@
       "walletBalance": 50000,
       "createdAt": "2025-05-10T00:00:00.000Z",
       "isEmailVerified": true
-    },
-    {
-      "_id": "usr_personal",
-      "id": "usr_personal",
-      "name": "Demo Investor",
-      "email": "investor@agrofinance.bd",
-      "password": "$2b$10$v2q6yp6Jc4hGSiYJY/ql1OdqDMqeNJTDDyAKGx0EGlpBLZVzLJeZK",
-      "role": "investor",
-      "phone": "+880 1712-345678",
-      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=250",
-      "nid": "19902692015000999",
-      "address": "Gulshan, Dhaka, Bangladesh",
-      "bankDetails": {
-        "bankName": "City Bank PLC",
-        "accountNo": "1102938475001",
-        "branch": "Principal Branch",
-        "bkashNo": "01712345678"
-      },
-      "kycStatus": "verified",
-      "kycDocuments": [
-        {
-          "name": "NID Card (Front & Back)",
-          "fileUrl": "/docs/nid_verified.pdf",
-          "submittedAt": "2025-01-10"
-        }
-      ],
-      "riskProfile": "moderate",
-      "walletBalance": 500000,
-      "isEmailVerified": true,
-      "createdAt": "2025-01-01T00:00:00.000Z"
     }
   ],
   "projects": [
