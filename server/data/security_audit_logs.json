@@ -1,5 +1,291 @@
 [
   {
+    "id": "sec_1793010221042_ryu3i",
+    "timestamp": "2026-10-26T10:23:41.042Z",
+    "type": "PROFILE_UPDATED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Profile updated for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010221040_wdzxp",
+    "timestamp": "2026-10-26T10:23:41.040Z",
+    "type": "PASSWORD_CHANGED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Password changed successfully for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220939_8pffx",
+    "timestamp": "2026-10-26T10:23:40.939Z",
+    "type": "PROFILE_UPDATED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Profile updated for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220936_2v5ig",
+    "timestamp": "2026-10-26T10:23:40.936Z",
+    "type": "PASSWORD_CHANGED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Password changed successfully for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220760_lm9oa",
+    "timestamp": "2026-10-26T10:23:40.760Z",
+    "type": "USER_REGISTERED_AND_ACTIVATED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_1793010220758_376hkw",
+    "message": "New investor account verified and officially saved in database: instant_verify_1793010220311@agrofinance.bd",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220363_tvgcx",
+    "timestamp": "2026-10-26T10:23:40.363Z",
+    "type": "USER_REGISTRATION_PENDING_OTP",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "InMemoryTest/1.0",
+    "userId": null,
+    "message": "New registration initiated (pending OTP verification): instant_verify_1793010220311@agrofinance.bd",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220310_ed0uu",
+    "timestamp": "2026-10-26T10:23:40.310Z",
+    "type": "KYC_APPROVED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Admin admin@agrofinance.bd updated KYC for user ahmed@agrofinance.bd to verified",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220307_m9b98",
+    "timestamp": "2026-10-26T10:23:40.307Z",
+    "type": "KYC_SUBMITTED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "KYC & Nominee verification submitted for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220304_eh7lw",
+    "timestamp": "2026-10-26T10:23:40.304Z",
+    "type": "INVESTMENT_REQUESTED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "User [ahmed@agrofinance.bd] placed pending investment request of ৳50000 in project [Green Valley Integrated Agro Mega Farm - Sylhet] via [bKash Direct]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220301_g77s4",
+    "timestamp": "2026-10-26T10:23:40.301Z",
+    "type": "INVESTMENT_REJECTED",
+    "severity": "WARNING",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Admin [admin@agrofinance.bd] rejected investment of ৳50000 in project [Green Valley Integrated Agro Mega Farm - Sylhet] for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220293_2tn43",
+    "timestamp": "2026-10-26T10:23:40.293Z",
+    "type": "INVESTMENT_REQUESTED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "User [ahmed@agrofinance.bd] placed pending investment request of ৳50000 in project [Green Valley Integrated Agro Mega Farm - Sylhet] via [Wallet]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220287_affhm",
+    "timestamp": "2026-10-26T10:23:40.287Z",
+    "type": "INVESTMENT_APPROVED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Admin [admin@agrofinance.bd] approved investment of ৳50000 in project [Green Valley Integrated Agro Mega Farm - Sylhet] for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220278_hh17b",
+    "timestamp": "2026-10-26T10:23:40.278Z",
+    "type": "ANNOUNCEMENT_BROADCAST",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": null,
+    "message": "Admin [admin@agrofinance.bd] broadcast notice: নতুন বোরো মৌসুমে ২০% বোনাস রিটার্ন",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220274_2n735",
+    "timestamp": "2026-10-26T10:23:40.274Z",
+    "type": "BALANCE_MANUALLY_ADJUSTED",
+    "severity": "WARNING",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": null,
+    "message": "Admin [admin@agrofinance.bd] credited ৳15000 to user [ahmed@agrofinance.bd]. Reason: undefined",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220261_tx0rq",
+    "timestamp": "2026-10-26T10:23:40.261Z",
+    "type": "ADMIN_LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "InMemoryTest/1.0",
+    "userId": "usr_admin",
+    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010220183_8ljbw",
+    "timestamp": "2026-10-26T10:23:40.183Z",
+    "type": "USER_REGISTERED_AND_ACTIVATED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_1793010220177_yelaiw",
+    "message": "New investor account verified and officially saved in database: test_investor_1793010219003@agrofinance.bd",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010219056_srj9i",
+    "timestamp": "2026-10-26T10:23:39.056Z",
+    "type": "USER_REGISTRATION_PENDING_OTP",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "InMemoryTest/1.0",
+    "userId": null,
+    "message": "New registration initiated (pending OTP verification): test_investor_1793010219003@agrofinance.bd",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010218999_57aj2",
+    "timestamp": "2026-10-26T10:23:38.999Z",
+    "type": "INVESTMENT_REQUESTED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "User [ahmed@agrofinance.bd] placed pending investment request of ৳50000 in project [Green Valley Integrated Agro Mega Farm - Sylhet] via [Wallet]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010218989_vwnea",
+    "timestamp": "2026-10-26T10:23:38.989Z",
+    "type": "IDOR_ATTEMPT_BLOCKED",
+    "severity": "CRITICAL",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_002",
+    "message": "User [fatima@agrofinance.bd] attempted unauthorized access to investment [inv_001] owned by [usr_001]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010218972_pgywp",
+    "timestamp": "2026-10-26T10:23:38.972Z",
+    "type": "LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "InMemoryTest/1.0",
+    "userId": "usr_002",
+    "message": "User logged in successfully: fatima@agrofinance.bd (investor)",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010218920_nlux3",
+    "timestamp": "2026-10-26T10:23:38.920Z",
+    "type": "PROFILE_UPDATED",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "Unknown",
+    "userId": "usr_001",
+    "message": "Profile updated for user [ahmed@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1793010218885_ahxkl",
+    "timestamp": "2026-10-26T10:23:38.885Z",
+    "type": "LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "127.0.0.1",
+    "userAgent": "InMemoryTest/1.0",
+    "userId": "usr_001",
+    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
+    "meta": {}
+  },
+  {
+    "id": "sec_1792991803239_5274e",
+    "timestamp": "2026-10-26T05:16:43.239Z",
+    "type": "ADMIN_LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "::1",
+    "userAgent": "node",
+    "userId": "usr_admin",
+    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1792991785116_65cy5",
+    "timestamp": "2026-10-26T05:16:25.116Z",
+    "type": "LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "::1",
+    "userAgent": "node",
+    "userId": "usr_001",
+    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
+    "meta": {}
+  },
+  {
+    "id": "sec_1792991279006_e24nv",
+    "timestamp": "2026-10-26T05:07:59.006Z",
+    "type": "ADMIN_LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "::1",
+    "userAgent": "node",
+    "userId": "usr_admin",
+    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
+    "meta": {}
+  },
+  {
+    "id": "sec_1792991271562_nxstn",
+    "timestamp": "2026-10-26T05:07:51.562Z",
+    "type": "LOGIN_SUCCESS",
+    "severity": "INFO",
+    "ip": "::1",
+    "userAgent": "node",
+    "userId": "usr_001",
+    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
+    "meta": {}
+  },
+  {
     "id": "sec_1792933324559_z8l98",
     "timestamp": "2026-10-25T13:02:04.559Z",
     "type": "WAF_AUTO_MITIGATION_COMPLETE",
@@ -249,7 +535,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": "usr_1792924827446_rqveif",
-    "message": "User logged in successfully: cse12105048@gmail.com (investor)",
+    "message": "User logged in successfully: investor@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -535,7 +821,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User logged in successfully: cse12105048brur@gmail.com (investor)",
+    "message": "User logged in successfully: investor_test@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -546,7 +832,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User [cse12105048brur@gmail.com] placed pending investment request of ৳75000 in project [Barind Multi-Sector Commercial Agro Complex - Rajshahi] via [bKash Gateway]",
+    "message": "User [investor_test@agrofinance.bd] placed pending investment request of ৳75000 in project [Barind Multi-Sector Commercial Agro Complex - Rajshahi] via [bKash Gateway]",
     "meta": {}
   },
   {
@@ -557,7 +843,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "Admin [admin@agrofinance.bd] approved investment of ৳75000 in project [Barind Multi-Sector Commercial Agro Complex - Rajshahi] for user [cse12105048brur@gmail.com]",
+    "message": "Admin [admin@agrofinance.bd] approved investment of ৳75000 in project [Barind Multi-Sector Commercial Agro Complex - Rajshahi] for user [investor_test@agrofinance.bd]",
     "meta": {}
   },
   {
@@ -568,7 +854,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User [cse12105048brur@gmail.com] placed pending investment request of ৳75000 in project [Barind Multi-Sector Commercial Agro Complex - Rajshahi] via [Bank Transfer]",
+    "message": "User [investor_test@agrofinance.bd] placed pending investment request of ৳75000 in project [Barind Multi-Sector Commercial Agro Complex - Rajshahi] via [Bank Transfer]",
     "meta": {}
   },
   {
@@ -601,7 +887,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User logged in successfully: cse12105048brur@gmail.com (investor)",
+    "message": "User logged in successfully: investor_test@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -634,7 +920,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User logged in successfully: cse12105048brur@gmail.com (investor)",
+    "message": "User logged in successfully: investor_test@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -656,7 +942,7 @@
     "ip": "::ffff:127.0.0.1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User logged in successfully: cse12105048brur@gmail.com (investor)",
+    "message": "User logged in successfully: investor_test@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -667,7 +953,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": "usr_1792924827446_rqveif",
-    "message": "User logged in successfully: cse12105048@gmail.com (investor)",
+    "message": "User logged in successfully: investor@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -678,7 +964,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": "usr_1792924827446_rqveif",
-    "message": "Password successfully reset via email OTP for: [cse12105048@gmail.com]",
+    "message": "Password successfully reset via email OTP for: [investor@agrofinance.bd]",
     "meta": {}
   },
   {
@@ -689,7 +975,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": "usr_1792924827446_rqveif",
-    "message": "Password reset OTP dispatched to: [cse12105048@gmail.com]",
+    "message": "Password reset OTP dispatched to: [investor@agrofinance.bd]",
     "meta": {}
   },
   {
@@ -700,7 +986,7 @@
     "ip": "::1",
     "userAgent": "Unknown",
     "userId": "usr_1792924827446_rqveif",
-    "message": "New investor account verified and officially saved in database: cse12105048@gmail.com",
+    "message": "New investor account verified and officially saved in database: investor@agrofinance.bd",
     "meta": {}
   },
   {
@@ -711,7 +997,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "New registration initiated (pending OTP verification): cse12105048@gmail.com",
+    "message": "New registration initiated (pending OTP verification): investor@agrofinance.bd",
     "meta": {}
   },
   {
@@ -722,7 +1008,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "Password reset OTP dispatched to: [cse12105048brur@gmail.com]",
+    "message": "Password reset OTP dispatched to: [investor_test@agrofinance.bd]",
     "meta": {}
   },
   {
@@ -733,7 +1019,7 @@
     "ip": "::1",
     "userAgent": "node",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User logged in successfully: cse12105048brur@gmail.com (investor)",
+    "message": "User logged in successfully: investor_test@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -744,7 +1030,7 @@
     "ip": "::1",
     "userAgent": "node",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "Password successfully reset via email OTP for: [cse12105048brur@gmail.com]",
+    "message": "Password successfully reset via email OTP for: [investor_test@agrofinance.bd]",
     "meta": {}
   },
   {
@@ -755,7 +1041,7 @@
     "ip": "::1",
     "userAgent": "node",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "Password reset OTP dispatched to: [cse12105048brur@gmail.com]",
+    "message": "Password reset OTP dispatched to: [investor_test@agrofinance.bd]",
     "meta": {}
   },
   {
@@ -788,7 +1074,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "Failed login attempt 1/5 for account [cse12105048brur@gmail.com].",
+    "message": "Failed login attempt 1/5 for account [investor_test@agrofinance.bd].",
     "meta": {}
   },
   {
@@ -799,7 +1085,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "User logged in successfully: cse12105048brur@gmail.com (investor)",
+    "message": "User logged in successfully: investor_test@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -810,7 +1096,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "Registration attempt with existing email: cse12105048brur@gmail.com",
+    "message": "Registration attempt with existing email: investor_test@agrofinance.bd",
     "meta": {}
   },
   {
@@ -821,7 +1107,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "Failed login attempt 1/5 for account [cse12105048brur@gmail.com].",
+    "message": "Failed login attempt 1/5 for account [investor_test@agrofinance.bd].",
     "meta": {}
   },
   {
@@ -1261,7 +1547,7 @@
     "ip": "::1",
     "userAgent": "Unknown",
     "userId": "usr_1792913542928_55ebdu",
-    "message": "New investor account verified and officially saved in database: cse12105048brur@gmail.com",
+    "message": "New investor account verified and officially saved in database: investor_test@agrofinance.bd",
     "meta": {}
   },
   {
@@ -1272,7 +1558,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "New registration initiated (pending OTP verification): cse12105048brur@gmail.com",
+    "message": "New registration initiated (pending OTP verification): investor_test@agrofinance.bd",
     "meta": {}
   },
   {
@@ -1283,7 +1569,7 @@
     "ip": "::1",
     "userAgent": "curl/8.7.1",
     "userId": null,
-    "message": "New registration initiated (pending OTP verification): cse12105048brur@gmail.com",
+    "message": "New registration initiated (pending OTP verification): investor_test@agrofinance.bd",
     "meta": {}
   },
   {
@@ -1404,7 +1690,7 @@
     "ip": "::1",
     "userAgent": "curl/8.7.1",
     "userId": "usr_1791964523293_vt8hvc",
-    "message": "User logged in successfully: jibontara780@gmail.com (investor)",
+    "message": "User logged in successfully: demo_investor@agrofinance.bd (investor)",
     "meta": {}
   },
   {
@@ -1415,7 +1701,7 @@
     "ip": "::1",
     "userAgent": "Unknown",
     "userId": "usr_1791964523293_vt8hvc",
-    "message": "New investor account verified and officially saved in database: jibontara780@gmail.com",
+    "message": "New investor account verified and officially saved in database: demo_investor@agrofinance.bd",
     "meta": {}
   },
   {
@@ -1426,7 +1712,7 @@
     "ip": "::1",
     "userAgent": "curl/8.7.1",
     "userId": null,
-    "message": "New registration initiated (pending OTP verification): jibontara780@gmail.com",
+    "message": "New registration initiated (pending OTP verification): demo_investor@agrofinance.bd",
     "meta": {}
   },
   {
@@ -1690,7 +1976,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "New registration initiated (pending OTP verification): jibontara780@gmail.com",
+    "message": "New registration initiated (pending OTP verification): demo_investor@agrofinance.bd",
     "meta": {}
   },
   {
@@ -2977,7 +3263,7 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
     "userId": null,
-    "message": "Failed login attempt 1/5 for account [jibontara780@gmail.com].",
+    "message": "Failed login attempt 1/5 for account [demo_investor@agrofinance.bd].",
     "meta": {}
   },
   {
@@ -3011,292 +3297,6 @@
     "userAgent": "Unknown",
     "userId": "usr_001",
     "message": "KYC & Nominee verification submitted for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791930228629_hr6fc",
-    "timestamp": "2026-10-13T22:23:48.629Z",
-    "type": "KYC_SUBMITTED",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "KYC & Nominee verification submitted for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791930159971_0mzxt",
-    "timestamp": "2026-10-13T22:22:39.971Z",
-    "type": "LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_001",
-    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791930084495_8yul2",
-    "timestamp": "2026-10-13T22:21:24.495Z",
-    "type": "ADMIN_LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_admin",
-    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791929794324_r1jd7",
-    "timestamp": "2026-10-13T22:16:34.324Z",
-    "type": "ACCOUNT_FROZEN",
-    "severity": "CRITICAL",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": "usr_1791927197573_kke658",
-    "message": "Admin [admin@agrofinance.bd] set account status of [instant_verify_1791927197519@agrofinance.bd] to [frozen]. Reason: hacked",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791929695570_qpo4h",
-    "timestamp": "2026-10-13T22:14:55.570Z",
-    "type": "ADMIN_LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_admin",
-    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791929084264_nf2qb",
-    "timestamp": "2026-10-13T22:04:44.264Z",
-    "type": "TRANSACTION_REVIEWED",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": null,
-    "message": "Admin [admin@agrofinance.bd] reviewed investment [txn_1791927197515_6s5zy8] -> completed",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791929058437_y233c",
-    "timestamp": "2026-10-13T22:04:18.437Z",
-    "type": "INVESTMENT_APPROVED",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Admin [admin@agrofinance.bd] approved investment of ৳50000 in project [Automated Layer Poultry & Egg Farm - Gazipur] for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791928983683_yavcu",
-    "timestamp": "2026-10-13T22:03:03.683Z",
-    "type": "ADMIN_LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_admin",
-    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791928962422_acuw9",
-    "timestamp": "2026-10-13T22:02:42.422Z",
-    "type": "INVESTMENT_REQUESTED",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "User [ahmed@agrofinance.bd] placed pending investment request of ৳50000 in project [Automated Layer Poultry & Egg Farm - Gazipur] via [Wallet]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791928674181_qu6ep",
-    "timestamp": "2026-10-13T21:57:54.181Z",
-    "type": "LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_001",
-    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927649391_jnix5",
-    "timestamp": "2026-10-13T21:40:49.391Z",
-    "type": "LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_001",
-    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927570114_oi56j",
-    "timestamp": "2026-10-13T21:39:30.114Z",
-    "type": "ADMIN_LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_admin",
-    "message": "Administrator successfully authenticated via Enterprise Admin Gateway: [admin@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927556303_v0r23",
-    "timestamp": "2026-10-13T21:39:16.303Z",
-    "type": "ADMIN_LOGIN_ON_USER_PORTAL",
-    "severity": "WARNING",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": null,
-    "message": "Admin account [admin@agrofinance.bd] attempted login via public investor portal. Redirection required.",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927556302_qt81k",
-    "timestamp": "2026-10-13T21:39:16.302Z",
-    "type": "LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_admin",
-    "message": "User logged in successfully: admin@agrofinance.bd (admin)",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927292131_c8ozl",
-    "timestamp": "2026-10-13T21:34:52.131Z",
-    "type": "PROFILE_UPDATED",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Profile updated for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927289916_whd4i",
-    "timestamp": "2026-10-13T21:34:49.916Z",
-    "type": "PROFILE_UPDATED",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Profile updated for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927264672_eqg7s",
-    "timestamp": "2026-10-13T21:34:24.672Z",
-    "type": "LOGIN_SUCCESS",
-    "severity": "INFO",
-    "ip": "::1",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "userId": "usr_001",
-    "message": "User logged in successfully: ahmed@agrofinance.bd (investor)",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197845_mr9ah",
-    "timestamp": "2026-10-13T21:33:17.845Z",
-    "type": "PROFILE_UPDATED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Profile updated for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197844_bnt05",
-    "timestamp": "2026-10-13T21:33:17.844Z",
-    "type": "PASSWORD_CHANGED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Password changed successfully for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197733_ahkiy",
-    "timestamp": "2026-10-13T21:33:17.733Z",
-    "type": "PROFILE_UPDATED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Profile updated for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197732_f1qo8",
-    "timestamp": "2026-10-13T21:33:17.732Z",
-    "type": "PASSWORD_CHANGED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Password changed successfully for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197575_d39hn",
-    "timestamp": "2026-10-13T21:33:17.575Z",
-    "type": "EMAIL_VERIFIED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_1791927197573_kke658",
-    "message": "Email verified successfully for: instant_verify_1791927197519@agrofinance.bd",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197574_cfyoq",
-    "timestamp": "2026-10-13T21:33:17.574Z",
-    "type": "USER_REGISTERED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "InMemoryTest/1.0",
-    "userId": "usr_1791927197573_kke658",
-    "message": "New investor account registered: instant_verify_1791927197519@agrofinance.bd",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197519_nzvmv",
-    "timestamp": "2026-10-13T21:33:17.519Z",
-    "type": "KYC_APPROVED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "Admin admin@agrofinance.bd updated KYC for user ahmed@agrofinance.bd to verified",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197517_wiqtv",
-    "timestamp": "2026-10-13T21:33:17.517Z",
-    "type": "KYC_SUBMITTED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "KYC & Nominee verification submitted for user [ahmed@agrofinance.bd]",
-    "meta": {}
-  },
-  {
-    "id": "sec_1791927197516_w5yke",
-    "timestamp": "2026-10-13T21:33:17.516Z",
-    "type": "INVESTMENT_REQUESTED",
-    "severity": "INFO",
-    "ip": "127.0.0.1",
-    "userAgent": "Unknown",
-    "userId": "usr_001",
-    "message": "User [ahmed@agrofinance.bd] placed pending investment request of ৳50000 in project [Premium Rice Cultivation - Sylhet] via [bKash Direct]",
     "meta": {}
   }
 ]

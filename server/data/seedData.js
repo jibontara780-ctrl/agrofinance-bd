@@ -8,14 +8,14 @@ async function getSeedData() {
     {
       _id: 'usr_personal',
       id: 'usr_personal',
-      name: 'Mahmudul Hassan',
-      email: 'cse12105048@gmail.com',
+      name: 'Demo Investor',
+      email: 'investor@agrofinance.bd',
       password: investorHash,
       role: 'investor',
       phone: '+880 1712-345678',
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=250',
-      nid: '19952692015000555',
-      address: 'Dhaka, Bangladesh',
+      nid: '19902692015000999',
+      address: 'Gulshan, Dhaka, Bangladesh',
       bankDetails: {
         bankName: 'City Bank PLC',
         accountNo: '1102938475001',

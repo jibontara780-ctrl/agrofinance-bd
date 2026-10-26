@@ -6,3 +6,5 @@ server/node_modules/
 dist/
 build/
 coverage/
+*.docx
+report_screenshots/
