@@ -186,7 +186,7 @@ Keep responses beautifully structured with bold titles, bullet points, and clean
         reply = await callOpenRouter(apiMessages, 'meta-llama/llama-3.3-70b-instruct');
       } catch (err2) {
         console.warn('[OpenRouter] Fallback model error:', err2.message, '- Using local intelligent engine.');
-        reply = generateLocalFallback(message, language, projects, marketPrices);
+        reply = generateLocalFallback(message, language, projects, []);
       }
     }
 
